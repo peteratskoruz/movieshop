@@ -1,0 +1,23 @@
+<div>
+    <form>
+        Search: <input 
+                    type="text" 
+                    placeholder="Search for movies"
+                    [formControl]="searchInput"
+                    ngModel
+                >
+    </form>
+    <div id="movie-list-container">
+        <md-card *ngFor="let movie of movies">
+            <md-card-title>{{movie.name}}</md-card-title>
+            <img md-card-lg-image [src]="movie.imgUrl">
+            <md-card-content>            
+                {{movie.description}}            
+            </md-card-content>
+            
+            <md-card-actions>
+                <button color="primary" md-raised-button (click)="onViewDeatils(movie.id)">View Details</button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>

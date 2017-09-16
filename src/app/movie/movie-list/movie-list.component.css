@@ -1,0 +1,13 @@
+#movie-list-container{
+    display: flex;
+}
+
+md-card{
+    margin-bottom: 10px;
+    width: 30%;
+}
+
+md-card-content{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+md-toolbar{
+    display: flex;
+}
+
+nav{
+    flex: 1;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button{
+    margin-left: 10px;
+}

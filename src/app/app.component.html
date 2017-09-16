@@ -1,0 +1,23 @@
+<div>
+  <md-toolbar color="primary">
+      {{title}}
+    <nav>
+      <a routerLink="/">Home</a>
+      <a *ngIf="userInfo && userInfo.role==='admin'" routerLink="/admin">Admin</a>
+    </nav>
+    <span *ngIf="userInfo">Welcome {{userInfo.name}}</span>
+    <span *ngIf="!userInfo">Welcome Guest</span>
+    <button md-button [mdMenuTriggerFor]="menu">
+        <md-icon>face</md-icon>
+    </button>    
+    <md-menu #menu="mdMenu">
+      <button *ngIf="userInfo" md-menu-item (click)="onLogout()">Logout</button>
+      <button *ngIf="!userInfo" md-menu-item (click)="onLogin()">Login</button>
+      <button md-menu-item>Item 2</button>
+    </md-menu>
+  </md-toolbar>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</div>
+
